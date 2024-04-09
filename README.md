@@ -4,7 +4,7 @@ Namada Explorer is a mobile application designed to provide information about th
 
 ## Installation
 
-You can install Namada Explorer by downloading the latest APK from the [GitHub repository](https://github.com/craborange/Namada-Explorer/blob/main/app-debug.apk).
+You can install Namada Explorer by downloading the latest APK from the [GitHub repository](https://github.com/craborange/Namada-Explorer/blob/master/app-debug.apk).
 
 ## Features
 
@@ -22,6 +22,6 @@ You can install Namada Explorer by downloading the latest APK from the [GitHub r
 
 ## Feedback and Contributions
 
-If you encounter any issues or have suggestions for improvements, please feel free to [open an issue](https://github.com/craborange/Namada-Explorer) on the GitHub repository.
+If you encounter any issues or have suggestions for improvements, please feel free to [open an issue](https://github.com/craborange/Namada-Explorer/issues) on the GitHub repository.
 
 Contributions are also welcome! If you'd like to contribute to the development of Namada Explorer, please follow the guidelines outlined in the repository.
