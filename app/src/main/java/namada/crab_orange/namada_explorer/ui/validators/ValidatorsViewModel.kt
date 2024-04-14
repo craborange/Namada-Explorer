@@ -22,7 +22,7 @@ class ValidatorViewModel @Inject constructor(private val stakePoolApis: StakePoo
             state = try {
                 val validators = stakePoolApis.getValidator()
                 ValidatorsUIState(
-                    validtors = validators.currentValidatorsList
+                    validtors = validators.validators
                 )
             } catch (t: Throwable) {
                 ValidatorsUIState(error = t.message)

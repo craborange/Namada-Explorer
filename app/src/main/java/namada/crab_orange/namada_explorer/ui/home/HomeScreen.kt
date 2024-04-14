@@ -44,13 +44,6 @@ fun HomeScreen(
             }
             item {
                 DataUI(
-                    image = R.drawable.namada,
-                    title = "Voting power",
-                    data = "${viewModel.state.votingPower.formatLongToText} NAM",
-                )
-            }
-            item {
-                DataUI(
                     image = R.drawable.users,
                     title = "Validator",
                     data = viewModel.state.validatorCount.toString(),

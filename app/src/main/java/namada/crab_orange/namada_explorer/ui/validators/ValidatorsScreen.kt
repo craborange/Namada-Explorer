@@ -48,36 +48,30 @@ fun ValidatorsScreen(
                         navController.navigate("ValidatorDetails")
                     }
                 ) {
-                    if (validator.moniker.isBlank()) {
-                        Text(text = validator.address.middleEllipsis, fontWeight = FontWeight.Bold)
-                    } else {
-                        Row(
-                            horizontalArrangement = Arrangement.spacedBy(0.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            Text(text = validator.moniker, fontWeight = FontWeight.Bold)
+                    if (validator.moniker != null) {
+                        if(validator.moniker.isBlank() && validator.operatorAddress != null) {
+                            Text(text = validator.operatorAddress.middleEllipsis, fontWeight = FontWeight.Bold)
+                        } else {
+                            Row(
+                                horizontalArrangement = Arrangement.spacedBy(0.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Text(text = validator.moniker, fontWeight = FontWeight.Bold)
 
-                            Text(text = " - ")
+                                if(validator.operatorAddress != null) {
+                                    Text(text = " - ")
 
-                            Text(
-                                text = validator.address.middleEllipsis,
-                                fontWeight = FontWeight.Bold
-                            )
+                                    Text(
+                                        text = validator.operatorAddress.middleEllipsis,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                }
+                            }
                         }
-                    }
-                    Row(
-                        horizontalArrangement = Arrangement.spacedBy(0.dp),
-                        verticalAlignment = Alignment.Bottom,
-                    ) {
-                        Text(
-                            text = "${validator.votingPower.formatLongToText} NAM",
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                        Text(
-                            text = " (${validator.votingPercentage.roundOffDecimal}%)",
-                            fontSize = 12.sp
-                        )
+                    } else {
+                        if(validator.operatorAddress != null) {
+                            Text(text = validator.operatorAddress.middleEllipsis, fontWeight = FontWeight.Bold)
+                        }
                     }
                 }
             }

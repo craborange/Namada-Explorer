@@ -55,7 +55,7 @@ object RegisterModule {
         factory: Gson,
         okHttpClient: OkHttpClient
     ): StakePoolApis = Retrofit.Builder()
-        .baseUrl("https://namada-explorer-api.stakepool.dev.br")
+        .baseUrl("https://namada.api.explorers.guru/")
         .addConverterFactory(GsonConverterFactory.create(factory))
         .client(okHttpClient)
         .build()
